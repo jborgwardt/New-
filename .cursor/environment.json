@@ -1,0 +1,4 @@
+{
+  "install": "./.cursor/tailscale-install.sh",
+  "start": "./.cursor/tailscale-start.sh"
+}
