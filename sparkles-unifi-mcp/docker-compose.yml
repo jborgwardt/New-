@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: sparkles-unifi-mcp_server_1
+      APP_PORT: 3000
+      # MCP clients cannot complete Umbrel's browser login, so the proxy must
+      # not require it. The MCP endpoint itself is unauthenticated: only expose
+      # this Umbrel on a network you trust.
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: ghcr.io/sirkirby/unifi-network-mcp:0.32.10@sha256:41a8dc6f40dae7eeb5b8292c8e422878e04a7a30874757e079f435affc5b962e
+    init: true
+    restart: on-failure
+    # Controller address and credentials live here. The pre-start hook creates
+    # a commented template on first start.
+    env_file:
+      - ${APP_DATA_DIR}/data/unifi.env
+    environment:
+      UNIFI_MCP_HTTP_ENABLED: "true"
+      UNIFI_MCP_HTTP_TRANSPORT: streamable-http
+      UNIFI_MCP_HOST: 0.0.0.0
+      UNIFI_MCP_PORT: 3000
+      # Host headers accepted in addition to UNIFI_MCP_ALLOWED_HOSTS from
+      # unifi.env (bare names match any port).
+      UNIFI_MCP_INTERNAL_ALLOWED_HOSTS: umbrel.local,sparkles-unifi-mcp_server_1,sparkles-unifi-mcp_app_proxy_1

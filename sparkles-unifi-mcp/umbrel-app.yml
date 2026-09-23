@@ -1,0 +1,42 @@
+manifestVersion: 1.1
+id: sparkles-unifi-mcp
+name: UniFi MCP
+tagline: Let AI assistants query and manage your UniFi Network controller
+icon: https://raw.githubusercontent.com/sirkirby/unifi-mcp/main/assets/icon-network.svg
+category: networking
+version: "0.32.10"
+port: 4398
+description: >-
+  UniFi MCP runs the UniFi Network Model Context Protocol (MCP) server from
+  sirkirby/unifi-mcp, so MCP clients such as Claude, Cursor or n8n can inspect
+  and manage your UniFi Network controller: devices, clients, WLANs, firewall
+  policies, traffic flows, health and events.
+
+
+  The server speaks Streamable HTTP at http://umbrel.local:4398/mcp. Point your
+  MCP client at that URL.
+
+
+  Setup: after installing, edit ~/umbrel/app-data/sparkles-unifi-mcp/data/unifi.env
+  over SSH, fill in your controller address and a local admin account, and
+  restart the app. If your client reaches the Umbrel by IP rather than
+  umbrel.local, add that IP to UNIFI_MCP_ALLOWED_HOSTS in the same file.
+
+
+  Security: the MCP endpoint has no authentication of its own, and anyone who
+  can reach it can act on your controller with the configured account. Only run
+  this on a trusted network. Changes go through a preview-then-confirm step by
+  default, and secrets such as Wi-Fi passphrases are redacted from responses.
+developer: sirkirby
+website: https://github.com/sirkirby/unifi-mcp
+submitter: jborgwardt
+submission: https://github.com/jborgwardt/New-
+repo: https://github.com/sirkirby/unifi-mcp
+support: https://github.com/sirkirby/unifi-mcp/issues
+gallery: []
+releaseNotes: >-
+  Initial release, packaging unifi-network-mcp 0.32.10.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Create the credentials file on first start so docker compose can load it.
+APP_DATA_DIR="$(readlink -f "$(dirname "${BASH_SOURCE[0]}")/..")"
+ENV_FILE="${APP_DATA_DIR}/data/unifi.env"
+
+mkdir -p "$(dirname "${ENV_FILE}")"
+
+if [[ ! -f "${ENV_FILE}" ]]; then
+  cat > "${ENV_FILE}" <<'TEMPLATE'
+# UniFi MCP configuration. Edit this file, then restart the app.
+
+# Controller IP or hostname, and a LOCAL admin account (not a Ubiquiti SSO account).
+UNIFI_NETWORK_HOST=192.168.1.1
+UNIFI_NETWORK_USERNAME=
+UNIFI_NETWORK_PASSWORD=
+
+# Optional:
+# UNIFI_NETWORK_API_KEY=
+# UNIFI_NETWORK_PORT=443
+# UNIFI_NETWORK_SITE=default
+# UNIFI_NETWORK_VERIFY_SSL=false
+
+# Host headers the MCP endpoint accepts. umbrel.local is always allowed; add the
+# IP or hostname your MCP client uses to reach this Umbrel, e.g. 192.168.1.50
+UNIFI_MCP_ALLOWED_HOSTS=localhost,127.0.0.1
+
+# Mutations (firewall rules, device changes, blocking clients) use a
+# preview-then-confirm flow by default. Set to bypass only for unattended automation.
+# UNIFI_TOOL_PERMISSION_MODE=confirm
+TEMPLATE
+  chmod 600 "${ENV_FILE}"
+fi
