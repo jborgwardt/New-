@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panzer-imgload
+name: "Image Loader"
+tagline: "Loads custom Panzer images"
+category: "developer"
+version: "1.0.0"
+port: 80
+description: >-
+  One-shot helper that loads Panzer's custom-built Docker images into Umbrel so apps like bubbalostreamer and xtool can run.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/docker.png"
+releaseNotes: "Loads custom images."
+submitter: "jborgwardt"
+submission: ""
+path: ""
+defaultUsername: ""
+defaultPassword: ""
