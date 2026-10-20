@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panzer-xtool
+name: "xtool"
+tagline: "iOS build/signing toolchain"
+category: "developer"
+version: "1.21.0"
+port: 8099
+description: >-
+  xtool Swift/iOS build and signing toolchain container (usbmuxd). Restored from Panzer backup.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/swift.png"
+releaseNotes: "Restored to Panzer store."
+submitter: "jborgwardt"
+submission: ""
+path: ""
+defaultUsername: ""
+defaultPassword: ""

@@ -1,0 +1,22 @@
+manifestVersion: 1
+id: panzer-bubbalostreamer
+name: "bubbalostreamer"
+tagline: "Usenet streamer (AltMount addon)"
+category: "media"
+version: "1.8.2"
+port: 7070
+description: >-
+  bubbalostreamer Usenet streaming addon that works with AltMount. Restored from Panzer backup.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/sabnzbd.png"
+releaseNotes: "Restored to Panzer store."
+submitter: "jborgwardt"
+submission: ""
+path: ""
+defaultUsername: ""
+defaultPassword: ""
