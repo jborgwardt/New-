@@ -12,7 +12,7 @@ services:
     command:
       - /bin/sh
       - -c
-      - 'set -e; if [ ! -e /appdata/.restored ]; then apk add --no-cache curl zstd tar >/dev/null; curl -fsSL http://100.64.0.4:3210/appdata/altmount.tar.zst -o /tmp/a.zst; mkdir -p /tmp/x /appdata; zstd -dc /tmp/a.zst | tar -xf - -C /tmp/x; cp -a /tmp/x/altmount/. /appdata/; touch /appdata/.restored; fi'
+      - 'set -e; if [ ! -e /appdata/.restored ]; then apk add --no-cache curl zstd tar >/dev/null; curl -fsSL http://100.64.0.4:3210/appdata/altmount.tar.zst -o /tmp/a.zst; mkdir -p /tmp/x; zstd -dc /tmp/a.zst | tar -xf - -C /tmp/x; cp -a /tmp/x/altmount/. /appdata/; touch /appdata/.restored; fi'
   server:
     depends_on:
       restore:
@@ -23,10 +23,13 @@ services:
       PUID: "99"
       PGID: "100"
       PORT: "8080"
+      JWT_SECRET: fed75fc0a0f6a1d2b1d898914aa94e450311c7b973f4e9bdcab499670eeeac12
     devices:
       - /dev/fuse:/dev/fuse
     cap_add:
       - SYS_ADMIN
+    ports:
+      - "8585:8080"
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${APP_DATA_DIR}/data/metadata:/metadata
