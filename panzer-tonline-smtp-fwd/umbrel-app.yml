@@ -3,7 +3,7 @@ id: panzer-tonline-smtp-fwd
 name: "T-Online SMTP Forward"
 tagline: "SMTP relay to secure T-Online"
 category: networking
-version: "latest"
+version: "restored-2"
 port: 4650
 description: >-
   socat relay forwarding local SMTP (port 4650) to securesmtp.t-online.de:465.

@@ -3,7 +3,7 @@ id: panzer-mosquitto
 name: "Mosquitto"
 tagline: "Eclipse MQTT broker"
 category: networking
-version: "2.1.2"
+version: "restored-2"
 port: 9001
 description: >-
   Eclipse Mosquitto MQTT broker. Your restored panzer MQTT broker (ports 1883/9001).

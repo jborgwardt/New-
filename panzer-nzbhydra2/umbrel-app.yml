@@ -3,7 +3,7 @@ id: panzer-nzbhydra2
 name: "NZBHydra2"
 tagline: "Usenet meta search"
 category: media
-version: "latest"
+version: "restored-2"
 port: 5076
 description: >-
   NZBHydra2 Usenet meta search and indexer aggregator.

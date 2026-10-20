@@ -3,7 +3,7 @@ id: panzer-pmd3
 name: "pymobiledevice3"
 tagline: "iOS device tooling (pymobiledevice3)"
 category: developer
-version: "latest"
+version: "restored-2"
 port: 80
 description: >-
   pymobiledevice3 iOS device tooling container (part of the iOS gateway). Headless worker.

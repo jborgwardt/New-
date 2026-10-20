@@ -3,7 +3,7 @@ id: panzer-streamnzb
 name: "StreamNZB"
 tagline: "Stream Usenet directly"
 category: media
-version: "latest"
+version: "restored-2"
 port: 7000
 description: >-
   StreamNZB streams Usenet content on the fly.

@@ -3,7 +3,7 @@ id: panzer-atvloadly
 name: "atvloadly"
 tagline: "Sideload IPAs to Apple TV"
 category: developer
-version: "latest"
+version: "restored-2"
 port: 80
 description: >-
   atvloadly sideloads IPA apps to Apple TV over the network.

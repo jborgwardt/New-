@@ -3,7 +3,7 @@ id: panzer-signtools
 name: "SignTools"
 tagline: "Self-hosted iOS app signing"
 category: developer
-version: "3.0.12"
+version: "restored-2"
 port: 8080
 description: >-
   SignTools self-hosted iOS app signing web UI. Signer config and certs are restored with the app data.

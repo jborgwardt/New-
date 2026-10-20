@@ -3,7 +3,7 @@ id: panzer-nzbdav
 name: "NzbDAV"
 tagline: "Usenet WebDAV streaming"
 category: media
-version: "alpha"
+version: "restored-2"
 port: 3000
 description: >-
   NzbDAV exposes Usenet content as a streamable WebDAV filesystem.

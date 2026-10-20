@@ -3,7 +3,7 @@ id: panzer-tor-socks-proxy
 name: "Tor SOCKS Proxy"
 tagline: "Tor SOCKS5 proxy"
 category: networking
-version: "latest"
+version: "restored-2"
 port: 9150
 description: >-
   Tor SOCKS5 proxy (host 9050 to container 9150) for anonymous outbound.
