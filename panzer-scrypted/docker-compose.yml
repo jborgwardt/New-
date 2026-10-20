@@ -12,7 +12,7 @@ services:
     command:
       - /bin/sh
       - -c
-      - 'set -e; if [ ! -e /appdata/.restored ]; then apk add --no-cache curl zstd tar >/dev/null; curl -fsSL http://100.64.0.4:3210/appdata/scrypted.tar.zst -o /tmp/a.zst; mkdir -p /tmp/x /appdata/volume; zstd -dc /tmp/a.zst | tar -xf - -C /tmp/x; cp -a /tmp/x/scrypted/. /appdata/volume/; touch /appdata/.restored; fi'
+      - 'set -eo pipefail; if [ ! -e /appdata/.restored ]; then apk add --no-cache curl zstd tar >/dev/null; mkdir -p /appdata/volume; curl -fsSL http://100.64.0.4:3210/appdata/scrypted.tar.zst | zstd -dc | tar -xf - -C /appdata/volume --strip-components=1; touch /appdata/.restored; fi'
   server:
     depends_on:
       restore:
