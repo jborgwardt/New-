@@ -3,7 +3,7 @@ id: panzer-imgload
 name: "Image Loader"
 tagline: "Loads custom Panzer images"
 category: "developer"
-version: "1.0.0"
+version: "registry-1"
 port: 80
 description: >-
   One-shot helper that loads Panzer's custom-built Docker images into Umbrel so apps like bubbalostreamer and xtool can run.
