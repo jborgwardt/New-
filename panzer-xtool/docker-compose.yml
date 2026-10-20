@@ -18,6 +18,7 @@ services:
       restore:
         condition: service_completed_successfully
     image: xtool-local:1.21.0
+    pull_policy: never
     restart: on-failure
     command: ["bash","-c","usbmuxd -U root -z 2>/dev/null; exec sleep infinity"]
     volumes:

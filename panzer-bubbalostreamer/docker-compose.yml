@@ -18,6 +18,7 @@ services:
       restore:
         condition: service_completed_successfully
     image: bubbalostreamer:1.8.2-altmount.1
+    pull_policy: never
     restart: on-failure
     command: ["npm","start"]
     environment:
