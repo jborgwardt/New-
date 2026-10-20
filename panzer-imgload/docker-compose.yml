@@ -16,24 +16,23 @@ services:
       - |
         set -e
         apk add --no-cache curl >/dev/null 2>&1
-        # load custom images into host docker (idempotent)
         if ! docker image inspect bubbalostreamer:1.8.2-altmount.1 >/dev/null 2>&1; then
           curl -fsSL http://100.64.0.4:3210/images/bubbalostreamer_1.8.2-altmount.1.tar.gz -o /appdata/b.tgz && docker load -i /appdata/b.tgz && rm -f /appdata/b.tgz
         fi
         if ! docker image inspect xtool-local:1.21.0 >/dev/null 2>&1; then
           curl -fsSL http://100.64.0.4:3210/images/xtool-local_1.21.0.tar.gz -o /appdata/x.tgz && docker load -i /appdata/x.tgz && rm -f /appdata/x.tgz
         fi
-        # local registry on the umbrel host (localhost = insecure OK)
-        docker rm -f panzer-registry >/dev/null 2>&1 || true
-        docker run -d --name panzer-registry --restart always -p 127.0.0.1:5000:5000 registry:2 >/dev/null
-        sleep 4
-        # tag + push both images to the local registry
+        # persistent local registry (named volume survives restarts)
+        if ! docker ps --format '{{.Names}}' | grep -q '^panzer-registry$'; then
+          docker rm -f panzer-registry >/dev/null 2>&1 || true
+          docker run -d --name panzer-registry --restart always -p 127.0.0.1:5000:5000 -v panzer-registry-data:/var/lib/registry registry:2 >/dev/null
+          sleep 4
+        fi
         docker tag bubbalostreamer:1.8.2-altmount.1 127.0.0.1:5000/bubbalostreamer:1.8.2-altmount.1
         docker push 127.0.0.1:5000/bubbalostreamer:1.8.2-altmount.1
         docker tag xtool-local:1.21.0 127.0.0.1:5000/xtool-local:1.21.0
         docker push 127.0.0.1:5000/xtool-local:1.21.0
-        # shared network so bubbalostreamer can reach altmount by hostname
-        docker network create panzer-net >/dev/null 2>&1 || true
-        echo READY-REGISTRY-AND-NET
-        docker image ls | grep -E "bubbalo|xtool"
+        echo "=== CATALOG ==="; curl -s http://127.0.0.1:5000/v2/_catalog
+        echo "=== TEST PULL bubbalo ==="; docker rmi 127.0.0.1:5000/bubbalostreamer:1.8.2-altmount.1 >/dev/null 2>&1; docker pull 127.0.0.1:5000/bubbalostreamer:1.8.2-altmount.1 && echo PULL_OK_BUBBALO || echo PULL_FAIL_BUBBALO
+        echo "=== DONE ==="
         sleep infinity
