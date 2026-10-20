@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-nzbdav
+name: "NzbDAV"
+tagline: "Usenet WebDAV streaming"
+category: "Media"
+version: "alpha"
+port: 3000
+description: >-
+  NzbDAV exposes Usenet content as a streamable WebDAV filesystem.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://raw.githubusercontent.com/nwithan8/unraid_templates/master/images/nzb-dav-icon.png"
+releaseNotes: "Restored to Panzer store."

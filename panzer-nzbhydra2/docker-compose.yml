@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: panzer-nzbhydra2_server_1
+      APP_PORT: 5076
+  server:
+    image: ghcr.io/ich777/nzbhydra2
+    restart: on-failure
+    environment:
+      TZ: America/New_York
+      UID: "99"
+      GID: "100"
+      DATA_DIR: /nzbhydra2
+    volumes:
+      - ${APP_DATA_DIR}/data/nzbhydra2:/nzbhydra2

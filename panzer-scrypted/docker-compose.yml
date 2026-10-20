@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: panzer-scrypted_server_1
+      APP_PORT: 10443
+  server:
+    image: ghcr.io/koush/scrypted
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/volume:/server/volume

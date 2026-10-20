@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-mosquitto
+name: "Mosquitto"
+tagline: "Eclipse MQTT broker"
+category: "Networking"
+version: "2.1.2"
+port: 9001
+description: >-
+  Eclipse Mosquitto MQTT broker. Your restored panzer MQTT broker (ports 1883/9001).
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://raw.githubusercontent.com/eclipse/mosquitto/master/logo/mosquitto-logo-noborder-320.png"
+releaseNotes: "Restored to Panzer store."

@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-streamnzb
+name: "StreamNZB"
+tagline: "Stream Usenet directly"
+category: "Media"
+version: "latest"
+port: 7000
+description: >-
+  StreamNZB streams Usenet content on the fly.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/usenet.png"
+releaseNotes: "Restored to Panzer store."

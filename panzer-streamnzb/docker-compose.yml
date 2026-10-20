@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: panzer-streamnzb_server_1
+      APP_PORT: 7000
+  server:
+    image: ghcr.io/gaisberg/streamnzb:latest
+    restart: on-failure
+    command: ["./streamnzb"]
+    environment:
+      TZ: America/New_York
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+    ports:
+      - "119:119"

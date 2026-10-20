@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-pmd3
+name: "pymobiledevice3"
+tagline: "iOS device tooling (pymobiledevice3)"
+category: "Development"
+version: "latest"
+port: 80
+description: >-
+  pymobiledevice3 iOS device tooling container (part of the iOS gateway). Headless worker.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/python.png"
+releaseNotes: "Restored to Panzer store."

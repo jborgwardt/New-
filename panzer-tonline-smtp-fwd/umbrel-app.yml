@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-tonline-smtp-fwd
+name: "T-Online SMTP Forward"
+tagline: "SMTP relay to secure T-Online"
+category: "Networking"
+version: "latest"
+port: 4650
+description: >-
+  socat relay forwarding local SMTP (port 4650) to securesmtp.t-online.de:465.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/socat.png"
+releaseNotes: "Restored to Panzer store."

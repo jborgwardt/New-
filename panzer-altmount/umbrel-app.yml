@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-altmount
+name: "AltMount"
+tagline: "Usenet virtual filesystem"
+category: "Media"
+version: "latest"
+port: 8080
+description: >-
+  AltMount usenet virtual filesystem. NOTE: the JWT secret is restored with the app data, not stored here.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://raw.githubusercontent.com/javi11/altmount/main/docs/static/img/logo.png"
+releaseNotes: "Restored to Panzer store."

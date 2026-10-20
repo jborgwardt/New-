@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-nzbhydra2
+name: "NZBHydra2"
+tagline: "Usenet meta search"
+category: "Media"
+version: "latest"
+port: 5076
+description: >-
+  NZBHydra2 Usenet meta search and indexer aggregator.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/nzbhydra2.png"
+releaseNotes: "Restored to Panzer store."

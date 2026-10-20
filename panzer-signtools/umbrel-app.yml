@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-signtools
+name: "SignTools"
+tagline: "Self-hosted iOS app signing"
+category: "Development"
+version: "3.0.12"
+port: 8080
+description: >-
+  SignTools self-hosted iOS app signing web UI. Signer config and certs are restored with the app data.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://raw.githubusercontent.com/SignTools/SignTools/master/img/logo.png"
+releaseNotes: "Restored to Panzer store."

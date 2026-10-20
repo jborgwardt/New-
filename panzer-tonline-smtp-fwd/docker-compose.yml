@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: panzer-tonline-smtp-fwd_server_1
+      APP_PORT: 4650
+  server:
+    image: alpine/socat
+    restart: on-failure
+    command: ["-d","TCP-LISTEN:4650,fork,reuseaddr","TCP:securesmtp.t-online.de:465"]

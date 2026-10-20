@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-tor-socks-proxy
+name: "Tor SOCKS Proxy"
+tagline: "Tor SOCKS5 proxy"
+category: "Networking"
+version: "latest"
+port: 9150
+description: >-
+  Tor SOCKS5 proxy (host 9050 to container 9150) for anonymous outbound.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/tor-browser.png"
+releaseNotes: "Restored to Panzer store."

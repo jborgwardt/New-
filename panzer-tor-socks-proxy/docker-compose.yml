@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: panzer-tor-socks-proxy_server_1
+      APP_PORT: 9150
+  server:
+    image: peterdavehello/tor-socks-proxy:latest
+    restart: on-failure
+    user: tor
+    ports:
+      - "9050:9150"

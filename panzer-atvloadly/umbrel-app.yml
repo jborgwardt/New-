@@ -1,0 +1,17 @@
+manifestVersion: 1
+id: panzer-atvloadly
+name: "atvloadly"
+tagline: "Sideload IPAs to Apple TV"
+category: "Development"
+version: "latest"
+port: 80
+description: >-
+  atvloadly sideloads IPA apps to Apple TV over the network.
+developer: "Panzer"
+website: "https://github.com/jborgwardt"
+dependencies: []
+repo: ""
+support: "https://github.com/jborgwardt"
+gallery: []
+icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/apple-tv.png"
+releaseNotes: "Restored to Panzer store."
