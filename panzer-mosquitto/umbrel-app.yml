@@ -13,7 +13,7 @@ dependencies: []
 repo: ""
 support: "https://github.com/jborgwardt"
 gallery: []
-icon: "https://raw.githubusercontent.com/eclipse/mosquitto/master/logo/mosquitto-logo-noborder-320.png"
+icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/mosquitto.png"
 releaseNotes: "Restored to Panzer store."
 submitter: "jborgwardt"
 submission: ""
