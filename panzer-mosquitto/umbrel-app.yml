@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panzer-mosquitto
 name: "Mosquitto"
 tagline: "Eclipse MQTT broker"
-category: "Networking"
+category: networking
 version: "2.1.2"
 port: 9001
 description: >-

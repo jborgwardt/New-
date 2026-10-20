@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panzer-pmd3
 name: "pymobiledevice3"
 tagline: "iOS device tooling (pymobiledevice3)"
-category: "Development"
+category: developer
 version: "latest"
 port: 80
 description: >-

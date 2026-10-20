@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panzer-nzbhydra2
 name: "NZBHydra2"
 tagline: "Usenet meta search"
-category: "Media"
+category: media
 version: "latest"
 port: 5076
 description: >-

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panzer-nzbdav
 name: "NzbDAV"
 tagline: "Usenet WebDAV streaming"
-category: "Media"
+category: media
 version: "alpha"
 port: 3000
 description: >-

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panzer-tonline-smtp-fwd
 name: "T-Online SMTP Forward"
 tagline: "SMTP relay to secure T-Online"
-category: "Networking"
+category: networking
 version: "latest"
 port: 4650
 description: >-

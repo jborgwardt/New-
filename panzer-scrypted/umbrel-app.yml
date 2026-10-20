@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panzer-scrypted
 name: "Scrypted"
 tagline: "Home video/NVR hub"
-category: "Home"
+category: automation
 version: "latest"
 port: 10443
 description: >-

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panzer-altmount
 name: "AltMount"
 tagline: "Usenet virtual filesystem"
-category: "Media"
+category: media
 version: "latest"
 port: 8080
 description: >-

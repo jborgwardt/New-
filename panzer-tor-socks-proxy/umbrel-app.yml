@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panzer-tor-socks-proxy
 name: "Tor SOCKS Proxy"
 tagline: "Tor SOCKS5 proxy"
-category: "Networking"
+category: networking
 version: "latest"
 port: 9150
 description: >-

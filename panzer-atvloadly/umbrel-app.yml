@@ -2,7 +2,7 @@ manifestVersion: 1
 id: panzer-atvloadly
 name: "atvloadly"
 tagline: "Sideload IPAs to Apple TV"
-category: "Development"
+category: developer
 version: "latest"
 port: 80
 description: >-
