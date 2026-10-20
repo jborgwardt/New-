@@ -3,7 +3,7 @@ id: panzer-altmount
 name: "AltMount"
 tagline: "Usenet virtual filesystem"
 category: media
-version: "restored-4"
+version: "restored-5"
 port: 8080
 description: >-
   AltMount usenet virtual filesystem. NOTE: the JWT secret is restored with the app data, not stored here.
