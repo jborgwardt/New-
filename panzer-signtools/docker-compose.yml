@@ -19,6 +19,8 @@ services:
         condition: service_completed_successfully
     image: signtools/signtools:3.0.12
     restart: on-failure
+    ports:
+      - "18080:8080"
     volumes:
       - ${APP_DATA_DIR}/data/data:/data
       - ${APP_DATA_DIR}/data/signer-cfg.yml:/signer-cfg.yml

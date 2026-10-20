@@ -22,7 +22,8 @@ services:
     command: ["./streamnzb"]
     environment:
       TZ: America/New_York
+    ports:
+      - "7000:7000"
+      - "119:119"
     volumes:
       - ${APP_DATA_DIR}/data:/app/data
-    ports:
-      - "119:119"

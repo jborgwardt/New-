@@ -24,5 +24,7 @@ services:
       UID: "99"
       GID: "100"
       DATA_DIR: /nzbhydra2
+    ports:
+      - "5076:5076"
     volumes:
       - ${APP_DATA_DIR}/data/nzbhydra2:/nzbhydra2

@@ -23,5 +23,7 @@ services:
       TZ: America/New_York
       PUID: "99"
       PGID: "100"
+    ports:
+      - "3000:3000"
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
