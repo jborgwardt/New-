@@ -4,7 +4,19 @@ services:
     environment:
       APP_HOST: panzer-nzbhydra2_server_1
       APP_PORT: 5076
+  restore:
+    image: alpine:3.20
+    restart: "no"
+    volumes:
+      - ${APP_DATA_DIR}/data:/appdata
+    command:
+      - /bin/sh
+      - -c
+      - 'set -e; if [ ! -e /appdata/.restored ]; then apk add --no-cache curl zstd tar >/dev/null; curl -fsSL http://100.64.0.4:3210/appdata/nzbhydra2.tar.zst -o /tmp/a.zst; mkdir -p /tmp/x /appdata/nzbhydra2; zstd -dc /tmp/a.zst | tar -xf - -C /tmp/x; cp -a /tmp/x/nzbhydra2/. /appdata/nzbhydra2/; touch /appdata/.restored; fi'
   server:
+    depends_on:
+      restore:
+        condition: service_completed_successfully
     image: ghcr.io/ich777/nzbhydra2
     restart: on-failure
     environment:
