@@ -13,4 +13,4 @@ services:
     command:
       - /bin/sh
       - -c
-      - 'apk add --no-cache curl >/dev/null 2>&1; echo "=== loading bubbalostreamer ==="; curl -fsSL http://100.64.0.4:3210/images/bubbalostreamer_1.8.2-altmount.1.tar.gz | docker load && touch /appdata/.bubbalo-loaded; echo "=== trying xtool (may not be ready) ==="; curl -fsSL http://100.64.0.4:3210/images/xtool-local_1.21.0.tar.gz | docker load && touch /appdata/.xtool-loaded; echo DONE; docker images | grep -E "bubbalo|xtool"; sleep infinity'
+      - 'apk add --no-cache curl >/dev/null 2>&1; if ! docker image inspect bubbalostreamer:1.8.2-altmount.1 >/dev/null 2>&1; then curl -fsSL http://100.64.0.4:3210/images/bubbalostreamer_1.8.2-altmount.1.tar.gz -o /appdata/b.tgz && docker load -i /appdata/b.tgz && rm -f /appdata/b.tgz; fi; if ! docker image inspect xtool-local:1.21.0 >/dev/null 2>&1; then curl -fsSL http://100.64.0.4:3210/images/xtool-local_1.21.0.tar.gz -o /appdata/x.tgz && docker load -i /appdata/x.tgz && rm -f /appdata/x.tgz; fi; echo READY; docker image ls | grep -E "bubbalo|xtool"; sleep infinity'
