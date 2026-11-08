@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="56" fill="#14161e"/>
+  <rect x="18" y="18" width="220" height="220" rx="46" fill="hsl(296 28% 18%)"/>
+  <text x="128" y="148" text-anchor="middle" font-family="Inter, ui-sans-serif, sans-serif" font-size="92" font-weight="650" fill="#f4f4f5">X</text>
+</svg>

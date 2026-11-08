@@ -13,7 +13,7 @@ dependencies: []
 repo: ""
 support: "https://github.com/jborgwardt"
 gallery: []
-icon: "https://cdn.jsdelivr.net/gh/selfhst/icons/png/swift.png"
+icon: https://raw.githubusercontent.com/jborgwardt/New-/master/panzer-xtool/icon.svg
 releaseNotes: "Restored to Panzer store."
 submitter: "jborgwardt"
 submission: ""
